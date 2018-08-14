@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MatchDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:orientation="horizontal"
+            android:background="#212121">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/home_team_logo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="85dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/liverpool"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="1dp"/>
+
+            <TextView
+                android:id="@+id/home_team_score"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="FT"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/away_team_score"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="50sp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/away_team_logo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="85dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/everton"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="1dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:background="#212121">
+
+            <TextView
+                android:id="@+id/referee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="Martin Atkinson" />
+
+            <TextView
+                android:id="@+id/kick_off_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="12 Aug - 3:00pm" />
+
+        </LinearLayout>
+
+
+        <!-- Team Sheet Layout -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@color/arsenal"
+                android:orientation="horizontal">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/homeTeamRecyclerView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/liverpool"
+                        android:layout_weight="1">
+                    </android.support.v7.widget.RecyclerView>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/awayTeamRecyclerView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/everton"
+                        android:layout_weight="1">
+                    </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
