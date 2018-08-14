@@ -1,2 +1,2 @@
 # API-Implementation-Example
-App which demonstrates downloading JSON data from a remote API leveraging Retrofit &amp; OkHttp, parsing to POJO with GSON, and generating a UI using RecyclerView &amp; CardView.
+This is a small application which demonstrates my proficiency with downloading JSON data from a remote API leveraging Retrofit &amp; OkHttp, parsing to JSON to POJOs with GSON, and programatically generating a UI using RecyclerView &amp; CardView.
